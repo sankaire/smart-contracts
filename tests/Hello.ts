@@ -7,7 +7,6 @@ describe("Hello World", () => {
     it("should get the hello world", async () => {
         const HW = await ethers.getContractFactory("HelloWorld");
         const hello = await HW.deploy();
-
         expect(await hello.hello()).to.be("Hello, World");
     });
 });
